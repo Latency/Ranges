@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <AssemblyOriginatorKeyFile>aaec.snk</AssemblyOriginatorKeyFile>
+	  <Authors>Latency McLaughlin</Authors>
+	  <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+	  <DebugType>embedded</DebugType>
+	  <DisablePackageAssetsCache>true</DisablePackageAssetsCache>
+	  <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <LangVersion>latest</LangVersion>
+	  <NeutralLanguage>en-US</NeutralLanguage>
+	  <Optimize>False</Optimize>
+	  <OutputType>Library</OutputType>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+	  <RepositoryType>GIT</RepositoryType>
+	  <SignAssembly>true</SignAssembly>
+	  <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+	  <TargetFrameworks>net452</TargetFrameworks>
+	  <Title></Title>
+	  <Description>Range indexing for strings.</Description>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageTags>C#; Ranges; API</PackageTags>
+	  <IncludeSymbols>False</IncludeSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>
