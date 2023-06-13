@@ -2,8 +2,6 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Range.cs
 
-#if NET452
-
 using System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
 
@@ -48,47 +46,10 @@ namespace System
         public bool Equals(Range other) => other.Start.Equals(Start) && other.End.Equals(End);
 
         /// <summary>Returns the hash code for this instance.</summary>
-        public override int GetHashCode()
-        {
-            #if (!NETSTANDARD2_0 && !NETFRAMEWORK)
-            return HashCode.Combine(Start.GetHashCode(), End.GetHashCode());
-            #else
-            return HashHelpers.Combine(Start.GetHashCode(), End.GetHashCode());
-            #endif
-        }
+        public override int GetHashCode() => HashHelpers.Combine(Start.GetHashCode(), End.GetHashCode());
 
         /// <summary>Converts the value of the current Range object to its equivalent string representation.</summary>
-        public override string ToString()
-        {
-            #if (!NETSTANDARD2_0 && !NETFRAMEWORK)
-            Span<char> span = stackalloc char[2 + (2 * 11)]; // 2 for "..", then for each index 1 for '^' and 10 for longest possible uint
-            int pos = 0;
-
-            if (Start.IsFromEnd)
-            {
-                span[0] = '^';
-                pos = 1;
-            }
-            bool formatted = ((uint)Start.Value).TryFormat(span.Slice(pos), out int charsWritten);
-            Debug.Assert(formatted);
-            pos += charsWritten;
-
-            span[pos++] = '.';
-            span[pos++] = '.';
-
-            if (End.IsFromEnd)
-            {
-                span[pos++] = '^';
-            }
-            formatted = ((uint)End.Value).TryFormat(span.Slice(pos), out charsWritten);
-            Debug.Assert(formatted);
-            pos += charsWritten;
-
-            return new string(span.Slice(0, pos));
-            #else
-            return $"{Start}..{End}";
-            #endif
-        }
+        public override string ToString() => $"{Start}..{End}";
 
         /// <summary>Create a Range object starting from start index to the end of the collection.</summary>
         public static Range StartAt(Index start) => new(start, Index.End);
@@ -107,7 +68,7 @@ namespace System
         /// We validate the range is inside the length scope though.
         /// </remarks>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        #if NET452
+        #if !NET461_OR_GREATER
         public Tuple<int, int> GetOffsetAndLength(int length)
         {
             var startIndex = Start;
@@ -132,5 +93,3 @@ namespace System
         #endif
     }
 }
-
-#endif

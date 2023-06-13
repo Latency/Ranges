@@ -2,8 +2,6 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Index.cs
 
-#if NET452
-
 using System.Runtime.CompilerServices;
 
 // ReSharper disable once CheckNamespace
@@ -104,19 +102,6 @@ namespace System
         /// <summary>Converts the value of the current Index object to its equivalent string representation.</summary>
         public override string ToString() => IsFromEnd ? ToStringFromEnd() : ((uint)Value).ToString();
 
-        private string ToStringFromEnd()
-        {
-            #if (!NETSTANDARD2_0 && !NETFRAMEWORK)
-            Span<char> span = stackalloc char[11]; // 1 for ^ and 10 for longest possible uint value
-            bool formatted = ((uint)Value).TryFormat(span.Slice(1), out int charsWritten);
-            Debug.Assert(formatted);
-            span[0] = '^';
-            return new string(span.Slice(0, charsWritten + 1));
-            #else
-            return '^' + Value.ToString();
-            #endif
-        }
+        private string ToStringFromEnd() => '^' + Value.ToString();
     }
 }
-
-#endif

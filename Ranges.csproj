@@ -1,31 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <AssemblyOriginatorKeyFile>aaec.snk</AssemblyOriginatorKeyFile>
-	  <Authors>Latency McLaughlin</Authors>
-	  <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
-	  <DebugType>embedded</DebugType>
-	  <DisablePackageAssetsCache>true</DisablePackageAssetsCache>
-	  <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
-	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <LangVersion>latest</LangVersion>
-	  <NeutralLanguage>en-US</NeutralLanguage>
-	  <Optimize>False</Optimize>
-	  <OutputType>Library</OutputType>
-	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-	  <PlatformTarget>AnyCPU</PlatformTarget>
-	  <RepositoryType>GIT</RepositoryType>
-	  <SignAssembly>true</SignAssembly>
-	  <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
-	  <TargetFrameworks>net452</TargetFrameworks>
-	  <Title></Title>
-	  <Description>Range indexing for strings.</Description>
-	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <PackageTags>C#; Ranges; API</PackageTags>
-	  <IncludeSymbols>False</IncludeSymbols>
+    <ApplicationIcon>$(SolutionDir)..\..\sBIO2.ico</ApplicationIcon>
+    <TargetFrameworks>net452;net46;net472;net48</TargetFrameworks>
+    <RepositoryUrl>https://github.com/Latency/Ranges</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Latency/Ranges</PackageProjectUrl>
+    <LicenseUrl>https://github.com/Latency/Ranges/blob/master/LICENSE</LicenseUrl>
+    <Version>1.0.4</Version>
+    <PackageIcon>project.png</PackageIcon>
+    <Description>Range indexing for strings.</Description>
+    <AssemblyOriginatorKeyFile>..\..\snKey.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\..\project.png" Link="Resources\project.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  
   <ItemGroup>
     <None Remove="README.md" />
   </ItemGroup>

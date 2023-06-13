@@ -2,8 +2,6 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Numerics/Hashing/HashHelpers.cs
 
-#if NET452
-
 // ReSharper disable once CheckNamespace
 namespace System.Numerics.Hashing
 {
@@ -17,5 +15,3 @@ namespace System.Numerics.Hashing
         }
     }
 }
-
-#endif
