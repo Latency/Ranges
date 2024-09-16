@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>netstandard2.0;net452;net46;net461;net462;net47;net471;net472;net48;net481</TargetFrameworks>
+    <RepositoryUrl>https://github.com/Latency/Ranges</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Latency/Ranges</PackageProjectUrl>
+    <LicenseUrl>https://github.com/Latency/Ranges/blob/master/LICENSE</LicenseUrl>
+    <Version>1.0.5</Version>
+    <Description>Range indexing for strings.</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Updated to support target framework .NET 9.0</PackageReleaseNotes>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
