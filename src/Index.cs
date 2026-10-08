@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Index.cs
 
+#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER
+
 using System.Runtime.CompilerServices;
 
 // ReSharper disable once CheckNamespace
@@ -104,3 +106,4 @@ public readonly struct Index : IEquatable<Index>
 
     private string ToStringFromEnd() => '^' + Value.ToString();
 }
+#endif

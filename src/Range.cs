@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Range.cs
 
+#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER
+
 using System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
 
@@ -92,3 +94,4 @@ public readonly struct Range : IEquatable<Range>
     }
 #endif
 }
+#endif

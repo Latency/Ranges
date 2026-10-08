@@ -1,5 +1,7 @@
 ﻿# Ranges
-### Range indexing for strings.
+
+
+Range indexing for strings.
 
 
 ---
@@ -16,11 +18,11 @@
 </tr>
 <tr>
 <td>UPDATED:</td>
-<td>9/16/2024</td>
+<td>10/8/2026</td>
 </tr>
 <tr>
-<td>FRAMEWORK:</td>
-<td>netstandard2.0, net452, net46, net461, net462, net47, net471, net472, net48, net481</td>
+<td>FRAMEWORKS:</td>
+<td>netstandard2.0, netstandard2.1</td>
 </tr>
 <tr>
 <td>LANGUAGE:</td>
@@ -44,7 +46,7 @@
 </tr>
 <tr>
 <td>STATUS:</td>
-<td><a href="https://github.com/Latency/Ranges/actions/workflows/dotnet.yml"><img src="https://github.com/Latency/Ranges/actions/workflows/dotnet.yml/badge.svg"></a></td>
+<td><a href="https://github.com/Latency/Ranges/actions/workflows/status.yml"><img src="https://github.com/Latency/Ranges/actions/workflows/status.yml/badge.svg"></a></td>
 </tr>
 <tr>
 <td>LICENSE:</td>
@@ -52,9 +54,9 @@
 </tr>
 <tr>
 <td>VERSION:</td>
-<td><a href="https://github.com/Latency/Ranges/releases"><img src="https://img.shields.io/github/v/release/Latency/Ranges?include_prereleases&style=plastic&logo=GitHub&logoColor=black&label=Version&color=blue"></a></td>
+<td>1.0.6</td>
 </tr>
-<!-- VERSION: 1.0.5 -->
+<!-- VERSION: 1.0.6 -->
 </table>
 
 
