@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Numerics/Hashing/HashHelpers.cs
 
+#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER
+
 // ReSharper disable once CheckNamespace
 namespace System.Numerics.Hashing;
 
@@ -14,3 +16,5 @@ internal static class HashHelpers
         return ((int)rol5 + h1) ^ h2;
     }
 }
+
+#endif

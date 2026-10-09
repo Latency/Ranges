@@ -18,7 +18,7 @@ Range indexing for strings.
 </tr>
 <tr>
 <td>UPDATED:</td>
-<td>10/8/2026</td>
+<td>10/9/2026</td>
 </tr>
 <tr>
 <td>FRAMEWORKS:</td>
@@ -54,9 +54,9 @@ Range indexing for strings.
 </tr>
 <tr>
 <td>VERSION:</td>
-<td>1.0.6</td>
+<td>1.0.7</td>
 </tr>
-<!-- VERSION: 1.0.6 -->
+<!-- VERSION: 1.0.7 -->
 </table>
 
 

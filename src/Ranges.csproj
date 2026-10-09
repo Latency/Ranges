@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
     <Description>Range indexing for strings.</Description>
 	<PackageReleaseNotes>Multi-target framework support for .NET Standard and .NET 11.</PackageReleaseNotes>
   </PropertyGroup>
