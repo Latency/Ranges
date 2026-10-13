@@ -1,14 +1,14 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Range.cs
 
-#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER
+#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER && !NET48_OR_GREATER
 
-using System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
 
-// ReSharper disable once CheckNamespace
+#pragma warning disable IDE0130
 namespace System;
+#pragma warning restore IDE0130
 
 /// <summary>Represent a range has start and end indexes.</summary>
 /// <remarks>
@@ -21,6 +21,14 @@ namespace System;
 /// </remarks>
 public readonly struct Range : IEquatable<Range>
 {
+    private static int Combine(int h1, int h2)
+    {
+        // JIT optimizes this to use the ROL instruction
+        // Related GitHub pull request: https://github.com/dotnet/coreclr/pull/1830
+        var rol5 = ((uint)h1 << 5) | ((uint)h1 >> 27);
+        return ((int)rol5 + h1) ^ h2;
+    }
+
     /// <summary>Represent the inclusive start index of the Range.</summary>
     public Index Start { get; }
 
@@ -48,7 +56,7 @@ public readonly struct Range : IEquatable<Range>
     public bool Equals(Range other) => other.Start.Equals(Start) && other.End.Equals(End);
 
     /// <summary>Returns the hash code for this instance.</summary>
-    public override int GetHashCode() => HashHelpers.Combine(Start.GetHashCode(), End.GetHashCode());
+    public override int GetHashCode() => Combine(Start.GetHashCode(), End.GetHashCode());
 
     /// <summary>Converts the value of the current Range object to its equivalent string representation.</summary>
     public override string ToString() => $"{Start}..{End}";
@@ -70,7 +78,7 @@ public readonly struct Range : IEquatable<Range>
     /// We validate the range is inside the length scope though.
     /// </remarks>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#if !NET47_OR_GREATER
+    #if !NET47_OR_GREATER
     public Tuple<int, int> GetOffsetAndLength(int length)
     {
         var startIndex = Start;
@@ -81,7 +89,7 @@ public readonly struct Range : IEquatable<Range>
 
         return (uint)end > (uint)length || (uint)start > (uint)end ? throw new ArgumentOutOfRangeException(nameof(length)) : new(start, end - start);
     }
-#else
+    #else
     public (int Offset, int Length) GetOffsetAndLength(int length)
     {
         var startIndex = Start;
@@ -92,6 +100,6 @@ public readonly struct Range : IEquatable<Range>
 
         return (uint) end > (uint) length || (uint) start > (uint) end ? throw new ArgumentOutOfRangeException(nameof(length)) : (start, end - start);
     }
-#endif
+    #endif
 }
 #endif

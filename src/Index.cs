@@ -1,13 +1,14 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Index.cs
 
-#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER
+#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER && !NET48_OR_GREATER
 
 using System.Runtime.CompilerServices;
 
-// ReSharper disable once CheckNamespace
+#pragma warning disable IDE0130
 namespace System;
+#pragma warning restore IDE0130
 
 /// <summary>Represent a type can be used to index a collection either from the start or the end.</summary>
 /// <remarks>
