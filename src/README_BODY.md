@@ -2,16 +2,14 @@
 
 ## Navigation
 
-• [Introduction](#introduction)
-• [Usage](#usage)
-• [Installation](#installation)
-• [License](#license)
+* [Introduction](#introduction)
+* [Usage](#usage)
 
 ---
 
 ## Introduction
 
-[Ranges](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges)
+[Ranges]
 
 This repository provides implementations (copied from corefx) of `System.Index` and `System.Range` for legacy .NET Frameworks.
 
@@ -50,19 +48,3 @@ int[] slice = numbers[1..4];
 The double-dot (..) extracts a subset (slice) of a collection.
 • Start index is inclusive (the item at this position is included).
 • End index is exclusive (the item at this position is not included).
-
-## Installation
-
-This library can be installed using NuGet found [here](https://www.nuget.org/packages/Ranges/).
-
-## License
-
-The source code for the site is licensed under the MIT license, which you can find in
-the [MIT-LICENSE].txt file.
-
----
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job.)
-
-   [GNU LESSER GENERAL PUBLIC LICENSE]: <http://www.gnu.org/licenses/lgpl-3.0.en.html>
-   [MIT-License]: <http://choosealicense.com/licenses/mit/>

@@ -1,79 +1,39 @@
 ﻿# Ranges
-
-
+ 
 Range & indexing support for legacy .NET Frameworks
-
-
----
-
-
-<table>
-<tr>
-<th></th>
-<th>Description</th>
-</tr>
-<tr>
-<td>CREATED BY:</td>
-<td>[Latency McLaughlin]</td>
-</tr>
-<tr>
-<td>UPDATED:</td>
-<td>10/12/2026</td>
-</tr>
-<tr>
-<td>FRAMEWORKS:</td>
-<td>net45, net451, net452, net46, net461, net462, net47, net471, net472, net48, net481, netstandard2.0, netstandard2.1, net8.0, net9.0, net10.0, net11.0</td>
-</tr>
-<tr>
-<td>LANGUAGE:</td>
-<td>[C#] preview</td>
-</tr>
-<tr>
-<td>OUTPUT TYPE:</td>
-<td>Library [API]</td>
-</tr>
-<tr>
-<td>SUPPORTS:</td>
-<td>[Visual Studio]</td>
-</tr>
-<tr>
-<td>GFX SUBSYS:</td>
-<td>[None]</td>
-</tr>
-<tr>
-<td>TAGS:</td>
-<td>[C#], [.NET], [API], [Visual Studio]</td>
-</tr>
-<tr>
-<td>STATUS:</td>
-<td><a href="https://github.com/Latency/Ranges/actions/workflows/status.yml"><img src="https://github.com/Latency/Ranges/actions/workflows/status.yml/badge.svg"></a></td>
-</tr>
-<tr>
-<td>LICENSE:</td>
-<td><a href="https://github.com/Latency/Ranges/blob/master/MIT-LICENSE.txt"><img src="https://img.shields.io/github/license/Latency/Ranges?style=plastic&logo=GitHub&logoColor=black&label=License&color=yellowgreen"></a></td>
-</tr>
-<tr>
-<td>VERSION:</td>
-<td>1.0.10</td>
-</tr>
-<!-- VERSION: 1.0.10 -->
-</table>
-
-
+ 
+| | Description |
+|---|---|
+| ASSEMBLY NAME: | Ranges |
+| CREATED BY: | [Latency McLaughlin] |
+| UPDATED: | 10/16/2026 |
+| FRAMEWORKS: | net45, net451, net452, net46, net461, net462, net47, net471, net472, net48, net481, netstandard2.0, netstandard2.1, net8.0, net9.0, net10.0, net11.0 |
+| LANGUAGE: | [C#] preview |
+| OUTPUT TYPE: | [Library] [API] |
+| SUPPORTS: | [Visual Studio] |
+| GFX SUBSYS: | [None] |
+| TAGS: | [C#], [Ranges], [Indexing] |
+| STATUS: | [![workflow-badge](https://github.com/Latency/Ranges/actions/workflows/status.yml/badge.svg)](https://github.com/Latency/Ranges/actions/workflows/status.yml) |
+| LICENSE: | [![license-badge](https://img.shields.io/github/license/Latency/Ranges?logo=GitHub&style=plastic&logoColor=black&label=License&color=yellowgreen)](https://github.com/Latency/Ranges/blob/master/MIT-LICENSE.txt) |
+| VERSION: | 1.0.11 |
+ 
 ---
 
 ## Navigation
 
-• [Introduction](#introduction)
-• [Usage](#usage)
-• [Installation](#installation)
-• [License](#license)
+* [Introduction](#introduction)
+* [Usage](#usage)
+* [Installation](#installation)
+* [References](#references)
+* [Report An Issue](#report-an-issue)
+* [Donation](#donation)
+* [License](#license)
 
 ---
 
 ## Introduction
 
-[Ranges](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges)
+[Ranges]
 
 This repository provides implementations (copied from corefx) of `System.Index` and `System.Range` for legacy .NET Frameworks.
 
@@ -112,19 +72,43 @@ int[] slice = numbers[1..4];
 The double-dot (..) extracts a subset (slice) of a collection.
 • Start index is inclusive (the item at this position is included).
 • End index is exclusive (the item at this position is not included).
-
+ 
 ## Installation
 
-This library can be installed using NuGet found [here](https://www.nuget.org/packages/Ranges/).
+This library can be installed from [NuGet].
+
+## References
+
+[Indexing], [Ranges]
+
+## Report An Issue
+
+If you have a patch to contribute, a feature to request, or a bug to report, please post to the [Issue Tracker](https://github.com/Latency/Ranges/issues).
+
+## Donation
+
+Click the button to donate to my efforts:
+[![Donate via Paypal](https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/Latency2?country.x=US&locale.x=en_US)
 
 ## License
 
-The source code for the site is licensed under the MIT license, which you can find in
-the [MIT-LICENSE].txt file.
+The source code for the site is licensed under the MIT license, which you can find in the [MIT-LICENSE].txt file.
 
 ---
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job.)
 
-   [GNU LESSER GENERAL PUBLIC LICENSE]: <http://www.gnu.org/licenses/lgpl-3.0.en.html>
+   [NuGet]: <https://github.com/Latency/Ranges/pkgs/nuget/Ranges/>
+   [.NET]: <https://en.wikipedia.org/wiki/.NET_Framework/>
+   [Visual Studio]: <https://en.wikipedia.org/wiki/Microsoft_Visual_Studio/>
+   [Library]: <https://en.wikipedia.org/wiki/Software_library/>
+   [Latency McLaughlin]: <https://www.linkedin.com/in/Latency/>
+   [API]: <https://en.wikipedia.org/wiki/Application_programming_interface>
+   [C#]: <https://en.wikipedia.org/wiki/C_Sharp_(programming_language)>
+   [DLL]: <https://en.wikipedia.org/wiki/Dynamic-link_library>
    [MIT-License]: <http://choosealicense.com/licenses/mit/>
+   [WPF]: <https://en.wikipedia.org/wiki/Windows_Presentation_Foundation/>
+   [WinForms]: <https://en.wikipedia.org/wiki/Windows_Forms/>
+   [Unit Tests]: <https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit>
+   [Indexing]: <https://learn.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes>
+   [Ranges]: <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/range>
