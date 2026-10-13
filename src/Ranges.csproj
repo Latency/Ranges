@@ -2,12 +2,12 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net45;net451;net452;net46;net461;net462;net47;net471;net472;net48;net481;netstandard2.0;netstandard2.1;net8.0;net9.0;net10.0;net11.0</TargetFrameworks>
-		<Version>1.0.9</Version>
+		<Version>1.0.10</Version>
 		<Description>Range &amp; indexing support for legacy .NET Frameworks</Description>
-		<PackageReleaseNotes>Multi-target framework support for .NET Framework up to .NET 11</PackageReleaseNotes>
+		<PackageReleaseNotes>Fix to support .NET 8 and package references for ValueTuple</PackageReleaseNotes>
 	</PropertyGroup>
 
-	<ItemGroup Condition=" $([System.Text.RegularExpressions.Regex]::IsMatch('$(TargetFramework)', '^net(40|403|45[12]?|46[12]?)$')) or '$(TargetFramework)' == 'uap10.0' ">
+	<ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework' And $([MSBuild]::VersionLessThan($(TargetFrameworkVersion.TrimStart('vV')), 4.7))">
 		<PackageReference Include="System.ValueTuple" Version="4.5.0" />
 	</ItemGroup>
 

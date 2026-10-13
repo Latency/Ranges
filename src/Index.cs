@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Index.cs
 
-#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER && !NET48_OR_GREATER
+#if !NETSTANDARD2_1_OR_GREATER && !NET5_0_OR_GREATER
 
 using System.Runtime.CompilerServices;
 

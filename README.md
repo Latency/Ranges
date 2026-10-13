@@ -54,9 +54,9 @@ Range & indexing support for legacy .NET Frameworks
 </tr>
 <tr>
 <td>VERSION:</td>
-<td>1.0.9</td>
+<td>1.0.10</td>
 </tr>
-<!-- VERSION: 1.0.9 -->
+<!-- VERSION: 1.0.10 -->
 </table>
 
 
